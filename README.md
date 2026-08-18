@@ -41,18 +41,11 @@ Streamlit UI (answer + citations + escalation if needed)
 ### 1. Create a Project Folder
 
 ```bash
-mkdir stripe-rag-chatbot
-cd stripe-rag-chatbot
+git clone https://github.com/MadhuDamani12/Stripe-Bot-.git
+cd Stripe-Bot-
 ```
 
-### 2. Clone the Repo
-
-```bash
-git clone https://github.com/DRJohnson21/Stripe-Customer-Support-RAG-Bot
-cd Stripe-Customer-Support-RAG-Bot
-```
-
-### 3. Create a Virtual Environment
+### 2. Create a Virtual Environment
 
 ```bash
 python -m venv .venv
@@ -63,13 +56,13 @@ Activate it:
 - **Mac/Linux:** `source .venv/bin/activate`
 - **Windows:** `.venv\Scripts\Activate.ps1`
 
-### 4. Install Dependencies
+### 3. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 5. Create the `.env` File
+### 4. Create the `.env` File
 
 Copy `.env.template` to `.env` and fill in your Azure OpenAI values:
 
@@ -83,7 +76,7 @@ AZURE_OPENAI_VECTOR_STORE_ID=your_vector_store_id
 
 > ⚠️ Never commit `.env` to GitHub. It is already in `.gitignore`.
 
-### 6. Upload Knowledge Base & Create Vector Store
+### 5. Upload Knowledge Base & Create Vector Store
 
 If you need to set up your own vector store, run the upload script:
 
@@ -99,7 +92,7 @@ This will:
 
 > You will need `gpt-4.1-mini` and `text-embedding-ada-002` deployed on your Azure OpenAI resource.
 
-### 7. Run the Chatbot
+### 6. Run the Chatbot
 
 ```bash
 streamlit run app.py
@@ -107,7 +100,7 @@ streamlit run app.py
 
 Open [http://localhost:8501](http://localhost:8501) in your browser.
 
-### 8. Stop the Chatbot
+### 7. Stop the Chatbot
 
 ```
 Ctrl + C
@@ -130,3 +123,7 @@ Ctrl + C
 - The `.env` file must be in the same folder as `app.py`.
 - Do not commit `.env` - only `.env.template` belongs in the repo.
 - The `upload_knowledge_base.py` script only needs to be run once per Azure resource to set up the vector store.
+
+## Author
+
+Madhu Damani — [GitHub](https://github.com/MadhuDamani12)
